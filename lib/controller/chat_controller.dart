@@ -30,11 +30,10 @@ class ChatController extends GetxController {
 
       textC.text = '';
     } else {
-      MyDialog.info('Biror narsa so\'rang!');
+      MyDialog.info('Hech nima yozmadingiz. Biror narsa so\'rang!');
     }
   }
 
-  //for moving to end message
   void _scrollDown() {
     scrollC.animateTo(scrollC.position.maxScrollExtent,
         duration: const Duration(milliseconds: 500), curve: Curves.ease);

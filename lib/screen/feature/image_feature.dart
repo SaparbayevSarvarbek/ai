@@ -23,7 +23,7 @@ class _ImageFeatureState extends State<ImageFeature> {
     return Scaffold(
       //app bar
       appBar: AppBar(
-        title: const Text('AI Image Creator'),
+        title: const Text('AI rasm'),
 
         //share btn
         actions: [
@@ -69,7 +69,7 @@ class _ImageFeatureState extends State<ImageFeature> {
             onTapOutside: (e) => FocusScope.of(context).unfocus(),
             decoration: const InputDecoration(
                 hintText:
-                'Imagine something wonderful & innovative\nType here & I will create for you 😃',
+                'Ajoyib va innovatsion narsani tasavvur qiling. Bu yerga yozing, men siz uchun yaratib beraman 😃',
                 hintStyle: TextStyle(fontSize: 13.5),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)))),
@@ -112,7 +112,7 @@ class _ImageFeatureState extends State<ImageFeature> {
 
           //create btn
           // CustomBtn(onTap: _c.createAIImage, text: 'Create'),
-          CustomBtn(onTap: _c.searchAiImage, text: 'Create'),
+          CustomBtn(onTap: _c.searchAiImage, text: 'Yaratish'),
         ],
       ),
     );

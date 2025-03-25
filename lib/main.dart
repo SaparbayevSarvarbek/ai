@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'apis/app_write.dart';
 import 'helper/ad_helper.dart';
+import 'helper/database_helper.dart';
 import 'helper/global.dart';
 import 'helper/pref.dart';
 import 'screen/splash_screen.dart';
@@ -13,7 +14,7 @@ Future<void> main() async {
 
   // init hive
   await Pref.initialize();
-
+  await _insertInitialData();
   // for app write initialization
   AppWrite.init();
 
@@ -27,6 +28,18 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
+Future<void> _insertInitialData() async {
+  final db = DatabaseHelper.instance;
+  List<Map<String, dynamic>> sections = await db.getSections();
+
+  if (sections.isEmpty) {
+    await db.addSection({"title": "ChatGPT haqida", "time": "7 min", "completed": 0, "color": "#6A5ACD"}); // Purple
+    await db.addSection({"title": "Sovol so'rash", "time": "5 min", "completed": 0, "color": "#DC143C"}); // Red
+    await db.addSection({"title": "Rasmlar yaratish", "time": "7 min", "completed": 0, "color": "#8A2BE2"}); // Blue-Violet
+    await db.addSection({"title": "Matnlarni tarjima qilish", "time": "7 min", "completed": 0, "color": "#DAA520"}); // Goldenrod
+    await db.addSection({"title": "Prompting Techniques", "time": "5 min", "completed": 0, "color": "#228B22"}); // Green
+  }
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

@@ -222,8 +222,8 @@ class TranslateController extends GetxController {
       status.value = Status.complete;
     } else {
       status.value = Status.none;
-      if (to.isEmpty) MyDialog.info('Select To Language!');
-      if (textC.text.isEmpty) MyDialog.info('Type Something to Translate!');
+      if (to.isEmpty) MyDialog.info('Tilni tanlang!');
+      if (textC.text.isEmpty) MyDialog.info('Tarjima uchun biror narsa yozing!');
     }
   }
 
@@ -247,9 +247,9 @@ class TranslateController extends GetxController {
       status.value = Status.complete;
     } else {
       status.value = Status.none;
-      if (to.isEmpty) MyDialog.info('Select To Language!');
+      if (to.isEmpty) MyDialog.info('Tilni tanlang!');
       if (textC.text.isEmpty) {
-        MyDialog.info('Type Something to Translate!');
+        MyDialog.info('Tarjima uchun biror narsa yozing!');
       }
     }
   }

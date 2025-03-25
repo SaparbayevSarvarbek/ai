@@ -40,7 +40,7 @@ class ImageController extends GetxController {
 
       status.value = Status.complete;
     } else {
-      MyDialog.info('Provide some beautiful image description!');
+      MyDialog.info('Yaratmoqchi bo\'lgan rasmni tasvirlang !');
     }
   }
 
@@ -70,14 +70,14 @@ class ImageController extends GetxController {
 
         Get.back();
 
-        MyDialog.success('Image Downloaded to Gallery!');
+        MyDialog.success('Rasm Galereyaga yuklab olindi!');
       } else {
         throw Exception('Failed to save image');
       }
     } catch (e) {
       //hide loading
       Get.back();
-      MyDialog.error('Something Went Wrong (Try again in sometime)!');
+      MyDialog.error('Nimadir xato ketdi (Birozdan keyin qayta urinib ko‘ring)!');
       log('downloadImageE: $e');
     }
   }
@@ -100,24 +100,23 @@ class ImageController extends GetxController {
 
       await Share.shareXFiles([XFile(file.path)],
           text:
-          'Check out this Amazing Image created by Ai Assistant App by Harsh H. Rajpurohit');
+          'Sarvarbek tomonidan Ai Assistant ilovasi tomonidan yaratilgan ushbu ajoyib tasvirni tekshiring');
     } catch (e) {
       //hide loading
       Get.back();
-      MyDialog.error('Something Went Wrong (Try again in sometime)!');
+      MyDialog.error('Nimadir xato ketdi (Birozdan keyin qayta urinib ko‘ring)!');
       log('downloadImageE: $e');
     }
   }
 
   Future<void> searchAiImage() async {
-    //if prompt is not empty
     if (textC.text.trim().isNotEmpty) {
       status.value = Status.loading;
 
       imageList.value = await APIs.searchAiImages(textC.text);
 
       if (imageList.isEmpty) {
-        MyDialog.error('Something went wrong (Try again in sometime)');
+        MyDialog.error('Nimadir xato ketdi (Birozdan keyin qayta urinib ko‘ring)!');
 
         return;
       }
@@ -126,7 +125,7 @@ class ImageController extends GetxController {
 
       status.value = Status.complete;
     } else {
-      MyDialog.info('Provide some beautiful image description!');
+      MyDialog.info('Yaratmoqchi bo\'lgan rasmni tasvirlang !');
     }
   }
 }

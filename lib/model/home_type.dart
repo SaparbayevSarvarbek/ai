@@ -11,8 +11,8 @@ extension MyHomeType on HomeType {
   //title
   String get title => switch (this) {
     HomeType.aiChatBot => 'AI ChatBot',
-    HomeType.aiImage => 'AI Image Creator',
-    HomeType.aiTranslator => 'Language Translator',
+    HomeType.aiImage => 'AI rasm',
+    HomeType.aiTranslator => 'Tarjimon',
   };
 
   //lottie

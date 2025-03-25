@@ -24,7 +24,7 @@ class _TranslatorFeatureState extends State<TranslatorFeature> {
     return Scaffold(
       //app bar
       appBar: AppBar(
-        title: const Text('Multi Language Translator'),
+        title: const Text('AI tarjimon'),
       ),
 
       //body
@@ -87,24 +87,22 @@ class _TranslatorFeatureState extends State<TranslatorFeature> {
               maxLines: null,
               onTapOutside: (e) => FocusScope.of(context).unfocus(),
               decoration: const InputDecoration(
-                  hintText: 'Translate anything you want...',
+                  hintText: 'Oʻzingiz xohlagan matnni tarjima qiling...',
                   hintStyle: TextStyle(fontSize: 13.5),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(10)))),
             ),
           ),
 
-          //result field
           Obx(() => _translateResult()),
 
-          //for adding some space
+
           SizedBox(height: mq.height * .04),
 
-          //translate btn
           CustomBtn(
             onTap: _c.googleTranslate,
             // onTap: _c.translate,
-            text: 'Translate',
+            text: 'Tarjima qilish',
           )
         ],
       ),

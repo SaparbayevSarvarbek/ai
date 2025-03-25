@@ -1,10 +1,10 @@
+import 'package:ai/screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../helper/global.dart';
 import '../helper/pref.dart';
 import '../widget/custom_loading.dart';
-import 'home_screen.dart';
 import 'onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,10 +19,9 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    //wait for some time on splash & then move to next screen
     Future.delayed(const Duration(seconds: 2), () {
       Get.off(() =>
-      Pref.showOnboarding ? const OnboardingScreen() : const HomeScreen());
+      Pref.showOnboarding ? const OnboardingScreen() : const MainScreen());
     });
   }
 
