@@ -33,13 +33,39 @@ Future<void> _insertInitialData() async {
   List<Map<String, dynamic>> sections = await db.getSections();
 
   if (sections.isEmpty) {
-    await db.addSection({"title": "ChatGPT haqida", "time": "7 min", "completed": 0, "color": "#6A5ACD"}); // Purple
-    await db.addSection({"title": "Sovol so'rash", "time": "5 min", "completed": 0, "color": "#DC143C"}); // Red
-    await db.addSection({"title": "Rasmlar yaratish", "time": "7 min", "completed": 0, "color": "#8A2BE2"}); // Blue-Violet
-    await db.addSection({"title": "Matnlarni tarjima qilish", "time": "7 min", "completed": 0, "color": "#DAA520"}); // Goldenrod
-    await db.addSection({"title": "Prompting Techniques", "time": "5 min", "completed": 0, "color": "#228B22"}); // Green
+    await db.addSection({
+      "title": "ChatGPT haqida",
+      "time": "7 min",
+      "completed": 0,
+      "color": "#6A5ACD"
+    }); // Purple
+    await db.addSection({
+      "title": "Sovol so'rash",
+      "time": "5 min",
+      "completed": 0,
+      "color": "#DC143C"
+    }); // Red
+    await db.addSection({
+      "title": "Rasmlar yaratish",
+      "time": "7 min",
+      "completed": 0,
+      "color": "#8A2BE2"
+    }); // Blue-Violet
+    await db.addSection({
+      "title": "Matnlarni tarjima qilish",
+      "time": "7 min",
+      "completed": 0,
+      "color": "#DAA520"
+    }); // Goldenrod
+    await db.addSection({
+      "title": "Prompting Techniques",
+      "time": "5 min",
+      "completed": 0,
+      "color": "#228B22"
+    }); // Green
   }
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -59,7 +85,7 @@ class MyApp extends StatelessWidget {
             elevation: 1,
             centerTitle: true,
             titleTextStyle:
-            TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
           )),
 
       //light
@@ -71,7 +97,7 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.white,
             iconTheme: IconThemeData(color: Colors.blue),
             titleTextStyle: TextStyle(
-                color: Colors.blue, fontSize: 20, fontWeight: FontWeight.w500),
+                color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
           )),
 
       //

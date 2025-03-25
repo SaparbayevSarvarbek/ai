@@ -18,10 +18,11 @@ class _QuestionState extends State<Question> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black12,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text("ChatGPT Yordam Qo'llanma"),
-        backgroundColor: Colors.tealAccent[700],
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.indigoAccent,
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
@@ -126,7 +127,7 @@ class _QuestionState extends State<Question> {
             style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.white)),
+                color: Colors.black)),
         SizedBox(height: 10),
         ...List.generate(tips.length,
             (index) => _buildExpandableTip(index, tips[index], icons[index])),
