@@ -71,6 +71,10 @@ dependencies:
   easy_audience_network: ^0.0.6
   sqflite: ^2.4.1
   animate_do: ^3.0.2
+  expandable: ^5.0.1
+  font_awesome_flutter: ^10.8.0
+  google_fonts: ^6.2.1
+
 
 dev_dependencies:
   flutter_test:
