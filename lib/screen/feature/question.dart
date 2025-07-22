@@ -1,9 +1,7 @@
-import 'package:animate_do/animate_do.dart';
-import 'package:expandable/expandable.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Question extends StatefulWidget {
   const Question({super.key});
@@ -18,11 +16,10 @@ class _QuestionState extends State<Question> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("ChatGPT Yordam Qo'llanma"),
+        title: Text("Savol so'rash"),
         foregroundColor: Colors.white,
-        backgroundColor: Colors.indigoAccent,
+        backgroundColor: Colors.teal[800],
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),

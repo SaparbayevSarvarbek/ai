@@ -56,13 +56,7 @@ Future<void> _insertInitialData() async {
       "time": "7 min",
       "completed": 0,
       "color": "#DAA520"
-    }); // Goldenrod
-    await db.addSection({
-      "title": "Prompting Techniques",
-      "time": "5 min",
-      "completed": 0,
-      "color": "#228B22"
-    }); // Green
+    });// Green
   }
 }
 
@@ -74,30 +68,30 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: appName,
       debugShowCheckedModeBanner: false,
-
       themeMode: Pref.defaultTheme,
-
-      //dark
       darkTheme: ThemeData(
           useMaterial3: false,
           brightness: Brightness.dark,
           appBarTheme: const AppBarTheme(
             elevation: 1,
             centerTitle: true,
-            titleTextStyle:
-                TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+            backgroundColor: Colors.black,
+            foregroundColor: Colors.white,
+            titleTextStyle: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
+            ),
           )),
-
-      //light
       theme: ThemeData(
           useMaterial3: false,
           appBarTheme: const AppBarTheme(
             elevation: 1,
             centerTitle: true,
             backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.blue),
+            foregroundColor: Colors.black,
             titleTextStyle: TextStyle(
-                color: Colors.white, fontSize: 20, fontWeight: FontWeight.w500),
+                color: Colors.black, fontSize: 20, fontWeight: FontWeight.w500),
           )),
 
       //

@@ -125,7 +125,6 @@ class _IntroductionState extends State<Introduction> {
     );
   }
 
-  // Bo‘lim sarlavhasi uchun funksiya
   Widget _buildSectionTitle(String title) {
     return FadeInLeft(
       duration: Duration(milliseconds: 1000),
@@ -140,7 +139,6 @@ class _IntroductionState extends State<Introduction> {
     );
   }
 
-  // Animatsiyali kartalar uchun funksiya
   Widget _buildAnimatedCard(String title, String description, IconData icon) {
     return FadeInUp(
       duration: Duration(milliseconds: 900),
@@ -179,7 +177,6 @@ class _IntroductionState extends State<Introduction> {
     );
   }
 
-  // Tarix uchun alohida kartalar
   Widget _buildHistoryItem(String year, String description) {
     return FadeInRight(
       duration: Duration(milliseconds: 1000),

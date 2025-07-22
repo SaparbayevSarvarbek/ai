@@ -45,9 +45,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
       _lottieController.forward().whenComplete(() {
         if (mounted) {
           setState(() {
-            _showAnimation =
-                false;
-
+            _showAnimation = false;
           });
         }
       });
@@ -101,7 +99,6 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         children: [
           AbsorbPointer(
             absorbing: _showAnimation,
-            // Animatsiya ishlayotgan paytda foydalanuvchi ekranga bosolmaydi
             child: Column(
               children: [
                 Expanded(
@@ -121,10 +118,10 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                               page = Question();
                               break;
                             case 3:
-                              page = ImageGenerator();
+                              page = ImageGenerationTipsModern();
                               break;
                             case 4:
-                              page = Translate();
+                              page = TranslationInfoPage();
                               break;
                           }
                           Navigator.push(
@@ -196,10 +193,10 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         child: Column(
           children: [
             UserAccountsDrawerHeader(
-              accountName: Text("Foydalanuvchi ismi"),
-              accountEmail: Text("email@example.com"),
+              accountName: Text("Sarvarbek"),
+              accountEmail: Text("sarvar3874@gmail.com"),
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/profile.png'),
+                backgroundImage: AssetImage('assets/images/profile.png'),
               ),
               decoration: BoxDecoration(color: Colors.blue),
             ),

@@ -1,4 +1,4 @@
-import 'package:ai/screen/main_screen.dart';
+import 'package:ai/screen/login_screen.dart';
 
 import '../main.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +8,6 @@ import 'package:lottie/lottie.dart';
 import '../helper/global.dart';
 import '../model/onboard.dart';
 import '../widget/custom_btn.dart';
-import 'home_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -20,17 +19,17 @@ class OnboardingScreen extends StatelessWidget {
     final list = [
       //onboarding 1
       Onboard(
-          title: 'Ask me Anything',
+          title: 'Mendan biror narsa so\'rang',
           subtitle:
-              'I can be your Best Friend & You can ask me anything & I will help you!',
+              'Men sizning eng yaxshi do\'stingiz bo\'lishim mumkin va siz mendan hamma narsani so\'rashingiz mumkin va men sizga yordam beraman!',
           lottie: 'ai_ask_me'),
 
       //onboarding 2
       Onboard(
-        title: 'Imagination to Reality',
+        title: 'Tasavvurdan haqiqatga',
         lottie: 'ai_play',
         subtitle:
-            'Just Imagine anything & let me know, I will create something wonderful for you!',
+            'Biror narsani tasavvur qilgan narsani menga izohlang, men uni siz uchun yaratib beraman!',
       ),
     ];
 
@@ -96,7 +95,7 @@ class OnboardingScreen extends StatelessWidget {
               CustomBtn(
                   onTap: () {
                     if (isLast) {
-                      Get.off(() => const MainScreen());
+                      Get.off(() => const LoginPage());
                       // Navigator.of(context).pushReplacement(MaterialPageRoute(
                       //     builder: (_) => const HomeScreen()));
                     } else {
@@ -105,7 +104,7 @@ class OnboardingScreen extends StatelessWidget {
                           curve: Curves.ease);
                     }
                   },
-                  text: isLast ? 'Finish' : 'Next'),
+                  text: isLast ? 'Login' : 'Keyingi'),
 
               const Spacer(flex: 2),
             ],

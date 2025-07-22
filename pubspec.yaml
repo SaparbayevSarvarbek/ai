@@ -33,7 +33,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  appwrite: ^15.0.0
+  appwrite: ^17.0.2
   cupertino_icons: ^1.0.8
   lottie: ^3.1.2
   hive: ^2.2.3
@@ -48,6 +48,7 @@ dependencies:
   # For Custom Animation
   flutter_animate: ^4.5.0
   animated_text_kit: ^4.2.2
+  flutter_web_auth_2: ^4.1.0
 
   # For API Call
   http: ^1.2.2

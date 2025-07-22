@@ -61,7 +61,6 @@ class _TranslatorFeatureState extends State<TranslatorFeature> {
                   ),
                 )),
 
-            //to language
             InkWell(
               onTap: () => Get.bottomSheet(LanguageSheet(c: _c, s: _c.to)),
               borderRadius: const BorderRadius.all(Radius.circular(15)),
