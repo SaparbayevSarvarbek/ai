@@ -1,1 +1,4 @@
-<img width="828" height="1794" alt="image" src="https://github.com/user-attachments/assets/f3247ff0-332e-4035-8fe9-8a66fb408f50" />
+AI helper mobile app
+
+https://github.com/user-attachments/assets/4e0a8945-d40c-42aa-893e-cd5074fba655
+
